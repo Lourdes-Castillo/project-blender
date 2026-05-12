@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio personal y proyectos de desarrollo web y animación.">
+    <title>Portafolio Personal</title>
+    <!-- Fuentes de Google: Outfit para un look moderno -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Importmap para Three.js -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
+    
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- Navegación Semántica -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">Portafolio<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal Semántico -->
+    <main>
+        <!-- Sección Hero -->
+        <section class="hero glass-panel" id="hero">
+            <div class="hero-content">
+                <h1 class="title">Hola, soy <span class="highlight">Nombre del Alumno</span></h1>
+                <h2 class="subtitle">Desarrollador Web & Diseñador de Interacciones</h2>
+                <p class="description">
+                    Creo experiencias digitales atractivas, dinámicas y accesibles. 
+                    Combinando código limpio con diseños modernos y animaciones fluidas.
+                </p>
+                <div class="hero-actions">
+                    <a href="#proyectos" class="btn btn-primary">Ver mis Proyectos</a>
+                    <a href="#contacto" class="btn btn-secondary">Contactarme</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Avatar o Foto -->
+                <div class="avatar-container">
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Avatar de Nombre del Alumno" class="avatar">
+                    <div class="glow-effect"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Sobre mí -->
+        <section class="section" id="sobre-mi">
+            <div class="section-header">
+                <h2>Sobre mí</h2>
+                <div class="divider"></div>
+            </div>
+            <article class="about-grid">
+                <div class="about-text glass-card">
+                    <p>Soy un apasionado de la tecnología y el diseño digital. Me especializo en crear aplicaciones web modernas utilizando las últimas tecnologías en HTML, CSS y JavaScript.</p>
+                    <p>Mi objetivo es fusionar la estética visual con la funcionalidad técnica, aportando interactividad a través de herramientas como Rive para animaciones vectoriales de alto rendimiento.</p>
+                </div>
+                <div class="about-stats glass-card">
+                    <div class="stat-item">
+                        <i class="fa-solid fa-code"></i>
+                        <h3>Código</h3>
+                        <p>Limpio y escalable</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fa-solid fa-paintbrush"></i>
+                        <h3>Diseño</h3>
+                        <p>Moderno e intuitivo</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fa-solid fa-bolt"></i>
+                        <h3>Rendimiento</h3>
+                        <p>Rápido y eficiente</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Sección Habilidades -->
+        <section class="section" id="habilidades">
+            <div class="section-header">
+                <h2>Habilidades</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category glass-card">
+                    <h3>Frontend</h3>
+                    <ul class="skill-list">
+                        <li><i class="fa-brands fa-html5" style="color: #E34F26;"></i> HTML5 Semántico</li>
+                        <li><i class="fa-brands fa-css3-alt" style="color: #1572B6;"></i> CSS3 Moderno (Flexbox/Grid)</li>
+                        <li><i class="fa-brands fa-js" style="color: #F7DF1E;"></i> JavaScript ES6+</li>
+                    </ul>
+                </div>
+                <div class="skill-category glass-card">
+                    <h3>Animación & Diseño</h3>
+                    <ul class="skill-list">
+                        <li><i class="fa-solid fa-wand-magic-sparkles" style="color: #ff007a;"></i> Animaciones Rive</li>
+                        <li><i class="fa-solid fa-bezier-curve" style="color: #00d2ff;"></i> UI/UX Design</li>
+                        <li><i class="fa-solid fa-desktop" style="color: #fff;"></i> Diseño Responsivo</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Proyectos -->
+        <section class="section" id="proyectos">
+            <div class="section-header">
+                <h2>Proyectos Destacados</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="projects-grid">
+                
+                <!-- Proyecto 1: Animación Rive -->
+                <article class="project-card glass-card">
+                    <div class="project-media">
+                        <!-- Contenedor del Canvas de Rive -->
+                        <canvas id="riveCanvas" width="500" height="300" aria-label="Animación interactiva en Rive"></canvas>
+                    </div>
+                    <div class="project-info">
+                        <h3>Experiencia Interactiva con Rive</h3>
+                        <p>Una animación vectorial dinámica e interactiva utilizando el motor de Rive. Controlada por eventos de estado directamente desde JavaScript.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                            <span>Rive</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 2: Modelo 3D con Three.js -->
+                <article class="project-card glass-card">
+                    <div class="project-media" id="three-container" style="cursor: grab;">
+                        <!-- Contenedor del Canvas de Three.js -->
+                        <div id="loading-model" style="position: absolute; color: white; z-index: 10; font-weight: bold; background: rgba(0,0,0,0.5); padding: 5px 10px; border-radius: 5px;">Cargando modelo...</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Modelo 3D en la Web</h3>
+                        <p>Visualización interactiva de un modelo 3D (formato .glb). Permite rotar, hacer zoom y mover la cámara utilizando Three.js, GLTFLoader y OrbitControls.</p>
+                        <div class="project-tags">
+                            <span>Three.js</span>
+                            <span>GLTF</span>
+                            <span>Blender</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página Semántico con Contacto -->
+    <footer class="footer" id="contacto">
+        <div class="footer-content">
+            <h2>Hablemos de tu próximo proyecto</h2>
+            <p>¿Interesado en trabajar juntos? Contáctame a través de mis redes sociales o correo.</p>
+            
+            <div class="social-links">
+                <a href="#" aria-label="Github" class="social-icon"><i class="fa-brands fa-github"></i></a>
+                <a href="#" aria-label="LinkedIn" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Twitter" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                <a href="mailto:correo@ejemplo.com" aria-label="Correo" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Nombre del Alumno. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script de Rive desde CDN -->
+    <script src="https://unpkg.com/@rive-app/canvas@2.7.0"></script>
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
