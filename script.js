@@ -1,5 +1,5 @@
 // Archivo JavaScript principal para interacciones
-document.addEventListener('DOMContentLoaded', () => {
+const initApp = () => {
     // 1. Manejo del Header Transparente a Sólido al hacer scroll
     const header = document.getElementById('header');
     
@@ -16,6 +16,36 @@ document.addEventListener('DOMContentLoaded', () => {
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
+
+    // Lógica para el modo Claro/Oscuro (Light/Dark Theme)
+    const setupThemeToggle = () => {
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        if (!themeToggleBtn) return;
+        const icon = themeToggleBtn.querySelector('i');
+        
+        // Revisar si ya había un tema guardado en el navegador
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'light') {
+            document.body.classList.add('light-theme');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            let theme = 'dark';
+            if (document.body.classList.contains('light-theme')) {
+                theme = 'light';
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+            localStorage.setItem('theme', theme);
+        });
+    };
+    setupThemeToggle();
 
     // 3. Inicialización del componente de Rive (Animación)
     // Utilizamos el CDN de Rive que ya está incluido en index.html
@@ -94,4 +124,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 6. El modelo 3D ahora se maneja automáticamente a través del componente web <model-viewer> en el index.html
-});
+};
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initApp);
+} else {
+    initApp();
+}

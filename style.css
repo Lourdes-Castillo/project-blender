@@ -8,10 +8,10 @@
     --text-primary: #ffffff;
     --text-secondary: #a0a0b0;
 
-    /* Acentos - Gradientes Vibrantes */
-    --accent-glow: rgba(0, 210, 255, 0.5);
-    --accent-color-1: #00d2ff;
-    --accent-color-2: #3a7bd5;
+    /* Acentos - Gradientes Vibrantes (Celeste y Morado) */
+    --accent-glow: rgba(138, 43, 226, 0.4);
+    --accent-color-1: #00f2fe; /* Celeste vibrante */
+    --accent-color-2: #8a2be2; /* Morado elegante */
 
     /* Efecto Glassmorphism */
     --glass-bg: rgba(255, 255, 255, 0.03);
@@ -24,6 +24,22 @@
     /* Espaciado y Transiciones */
     --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     --border-radius: 16px;
+}
+
+body.light-theme {
+    --bg-primary: #f8fafc;
+    --bg-secondary: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    
+    /* Acentos para Modo Claro - Rojo y Azul Fuerte */
+    --accent-glow: rgba(230, 57, 70, 0.3);
+    --accent-color-1: #e63946; /* Rojo fuerte */
+    --accent-color-2: #023e8a; /* Azul oscuro fuerte */
+    
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(0, 0, 0, 0.05);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
 }
 
 /* =========================================
@@ -136,6 +152,19 @@ ul {
     transform: translateY(-3px);
 }
 
+.btn-theme {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+.btn-theme:hover {
+    color: var(--accent-color-1);
+    transform: scale(1.1);
+}
+
 .highlight {
     background: linear-gradient(135deg, var(--accent-color-1), var(--accent-color-2));
     -webkit-background-clip: text;
@@ -185,6 +214,11 @@ ul {
     backdrop-filter: blur(10px);
     padding: 1rem 0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+body.light-theme .header.scrolled {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .nav-container {
@@ -327,7 +361,7 @@ ul {
     width: 105%;
     height: 105%;
     border-radius: 50%;
-    background: linear-gradient(45deg, var(--accent-color-1), var(--accent-color-2), #ff007a);
+    background: linear-gradient(45deg, var(--accent-color-1), var(--accent-color-2), #9d4edd);
     z-index: 0;
     filter: blur(20px);
     opacity: 0.6;
@@ -521,6 +555,28 @@ ul {
 }
 
 /* =========================================
+   SKILLS & PROJECTS WRAPPER
+   ========================================= */
+.skills-projects-wrapper {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.skills-projects-wrapper.section {
+    max-width: 1400px;
+}
+
+.side-section {
+    flex: 1;
+    min-width: 0;
+}
+
+.side-section .section-header {
+    margin-bottom: 3rem;
+}
+
+/* =========================================
    FOOTER & CONTACTO
    ========================================= */
 .footer {
@@ -605,12 +661,23 @@ ul {
         justify-content: space-around;
         flex-wrap: wrap;
     }
+
+    .skills-projects-wrapper {
+        flex-direction: column;
+        gap: 6rem;
+    }
 }
 
 @media (max-width: 768px) {
     .nav-links {
-        display: none;
-        /* Idealmente aquí iría un menú hamburguesa */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+    .nav-container {
+        flex-direction: column;
     }
 
     .title {

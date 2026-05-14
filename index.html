@@ -26,6 +26,7 @@
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
+                <li><button id="theme-toggle" class="btn-theme" aria-label="Cambiar tema"><i class="fa-solid fa-moon"></i></button></li>
             </ul>
         </nav>
     </header>
@@ -53,13 +54,13 @@
             <div class="hero-content right-presentation" style="flex: 0.8; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2rem;">
                 <!-- Avatar -->
                 <div class="avatar-container" style="width: 180px; height: 180px;">
-                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Avatar del Alumno" class="avatar">
+                    <img src="./Gemini_Generated_Image_yv2oz5yv2oz5yv2o.png" alt="Avatar de Lourdes" class="avatar">
                     <div class="glow-effect"></div>
                 </div>
                 
                 <!-- Texto -->
                 <div style="width: 100%;">
-                    <h1 class="title" style="font-size: 2.8rem; margin-bottom: 0.5rem;">Hola, soy <br><span class="highlight">Nombre del Alumno</span></h1>
+                    <h1 class="title" style="font-size: 2.8rem; margin-bottom: 0.5rem;">Hola, soy <br><span class="highlight">Lourdes Marisol Castillo Caamal</span></h1>
                     <h2 class="subtitle" style="font-size: 1.3rem; margin-bottom: 1.5rem;">Desarrollador Web & Artista 3D</h2>
                     <p class="description" style="margin-bottom: 2rem; margin-left: auto; margin-right: auto; max-width: 400px;">
                         Creo experiencias digitales atractivas, combinando código limpio con diseños modernos y modelos 3D interactivos inmersivos.
@@ -80,8 +81,8 @@
             </div>
             <article class="about-grid">
                 <div class="about-text glass-card">
-                    <p>Soy un apasionado de la tecnología y el diseño digital. Me especializo en crear aplicaciones web modernas utilizando las últimas tecnologías en HTML, CSS y JavaScript.</p>
-                    <p>Mi objetivo es fusionar la estética visual con la funcionalidad técnica, aportando interactividad a través de herramientas como Rive para animaciones vectoriales de alto rendimiento.</p>
+                    <p>Soy estudiante de la carrera de <strong>Ingeniería en Sistemas Computacionales</strong>, apasionada por la tecnología y el desarrollo de software. Aplico los fundamentos de la ingeniería para crear aplicaciones web y móviles modernas utilizando herramientas como HTML, CSS, JavaScript y Flutter.</p>
+                    <p>Mi principal objetivo como futura ingeniera es fusionar la estética visual con una funcionalidad técnica sólida, aportando experiencias inmersivas a través de integraciones interactivas como animaciones de Rive y modelos 3D.</p>
                 </div>
                 <div class="about-stats glass-card">
                     <div class="stat-item">
@@ -103,8 +104,10 @@
             </article>
         </section>
 
-        <!-- Sección Habilidades -->
-        <section class="section" id="habilidades">
+        <!-- Wrapper Habilidades y Proyectos lado a lado -->
+        <div class="skills-projects-wrapper section">
+            <!-- Sección Habilidades -->
+            <section class="side-section" id="habilidades">
             <div class="section-header">
                 <h2>Habilidades</h2>
                 <div class="divider"></div>
@@ -129,35 +132,35 @@
             </div>
         </section>
 
-        <!-- Sección Proyectos -->
-        <section class="section" id="proyectos">
+            <!-- Sección Proyectos -->
+            <section class="side-section" id="proyectos">
             <div class="section-header">
                 <h2>Proyectos Destacados</h2>
                 <div class="divider"></div>
             </div>
             <div class="projects-grid">
                 
-                <!-- Proyecto 1: Animación Rive -->
+                <!-- Proyecto 1: Interactive Bear Login - Flutter & Rive -->
                 <article class="project-card glass-card">
-                    <div class="project-media">
-                        <!-- Contenedor del Canvas de Rive -->
-                        <canvas id="riveCanvas" width="500" height="300" aria-label="Animación interactiva en Rive"></canvas>
+                    <div class="project-media" style="background: rgba(0, 0, 0, 0.3);">
+                        <img src="https://github.com/user-attachments/assets/402ed36e-b1ba-42b4-97f3-2cdd2611850d" alt="Interactive Bear Login Demo" style="object-fit: contain; padding: 2rem; width: 100%; height: 100%;">
                     </div>
                     <div class="project-info">
-                        <h3>Experiencia Interactiva con Rive</h3>
-                        <p>Una animación vectorial dinámica e interactiva utilizando el motor de Rive. Controlada por eventos de estado directamente desde JavaScript.</p>
+                        <h3>Interactive Bear Login</h3>
+                        <p>Interfaz de inicio de sesión interactiva y dinámica construida con Flutter. Presenta un oso animado con Rive que sigue el texto ingresado y se cubre los ojos al escribir contraseñas, mejorando la experiencia del usuario.</p>
                         <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JS</span>
+                            <span>Flutter</span>
+                            <span>Dart</span>
                             <span>Rive</span>
                         </div>
+                        <a href="https://github.com/Lourdes-Castillo/login_with_rive_animation" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; display: inline-block;"><i class="fa-brands fa-github"></i> Ver Repositorio</a>
                     </div>
                 </article>
 
                 <!-- El proyecto 2 de 3D se ha movido al Hero -->
             </div>
-        </section>
+            </section>
+        </div>
     </main>
 
     <!-- Pie de página Semántico con Contacto -->
@@ -167,21 +170,19 @@
             <p>¿Interesado en trabajar juntos? Contáctame a través de mis redes sociales o correo.</p>
             
             <div class="social-links">
-                <a href="#" aria-label="Github" class="social-icon"><i class="fa-brands fa-github"></i></a>
-                <a href="#" aria-label="LinkedIn" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#" aria-label="Twitter" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
-                <a href="mailto:correo@ejemplo.com" aria-label="Correo" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://github.com/Lourdes-Castillo" target="_blank" aria-label="Github" class="social-icon"><i class="fa-brands fa-github"></i></a>
+                <a href="https://wa.me/529871016217" target="_blank" aria-label="Teléfono / WhatsApp" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=castillocaamallourdesmarisol@gmail.com" target="_blank" aria-label="Correo" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <span id="year"></span> Nombre del Alumno. Todos los derechos reservados.</p>
+            <p>&copy; <span id="year"></span> Lourdes Marisol Castillo Caamal. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- Script de Rive desde CDN -->
-    <script src="https://unpkg.com/@rive-app/canvas@2.7.0"></script>
+
     <!-- Script de Model Viewer -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
-    <script type="module" src="./script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
