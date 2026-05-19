@@ -123,7 +123,37 @@ const initApp = () => {
         revealOnScroll.observe(el);
     });
 
-    // 6. El modelo 3D ahora se maneja automáticamente a través del componente web <model-viewer> en el index.html
+    // 6. Carga Inteligente del Modelo 3D (Previene crasheos en móviles y optimiza rendimiento)
+    const modelViewer = document.getElementById('my-model');
+    if (modelViewer) {
+        if (window.location.protocol === 'file:') {
+            // Modo Local: Evita el error CORS cargando el archivo Base64 dinámicamente
+            const script = document.createElement('script');
+            script.src = './assets/modelData.js';
+            script.onload = () => {
+                if (typeof modelData !== 'undefined') {
+                    // Convertir el Base64 a un Blob URL para evitar límites de tamaño de URI en móviles
+                    try {
+                        const b64Data = modelData.split(',')[1];
+                        const byteString = atob(b64Data);
+                        const ab = new ArrayBuffer(byteString.length);
+                        const ia = new Uint8Array(ab);
+                        for (let i = 0; i < byteString.length; i++) {
+                            ia[i] = byteString.charCodeAt(i);
+                        }
+                        const blob = new Blob([ab], { type: 'model/gltf-binary' });
+                        modelViewer.src = URL.createObjectURL(blob);
+                    } catch(e) {
+                        modelViewer.src = modelData; // Fallback
+                    }
+                }
+            };
+            document.body.appendChild(script);
+        } else {
+            // Modo Servidor / Móvil (GitHub Pages, localhost): Carga el .glb directo y ahorra muchísima memoria
+            modelViewer.src = './assets/Statup.glb';
+        }
+    }
 };
 
 if (document.readyState === 'loading') {
