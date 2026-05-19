@@ -1,12 +1,12 @@
 # 🖥️ Interactive 3D Web Portfolio
 
-¡Bienvenido/a a mi portafolio web interactivo! Este proyecto fusiona el diseño de interfaces web modernas con gráficos 3D en tiempo real utilizando WebGL. A través de una escena interactiva, represento un setup de programador diseñado desde cero, demostrando habilidades en modelado, optimización y desarrollo frontend.
+Welcome to my interactive web portfolio! This project merges modern web interface design with real-time 3D graphics using WebGL. Through an interactive scene, I showcase a developer setup designed from scratch, demonstrating skills in 3D modeling, mesh optimization, and frontend development.
 
 ---
 
-## 🚀 Demo En Vivo & Repositorio
-* 🌐 **Sitio Web Activo:** [https://Lourdes-Castillo.github.io/project-blender](https://Lourdes-Castillo.github.io/project-blender)
-* 📂 **Repositorio del Proyecto:** [https://github.com/Lourdes-Castillo/project-blender](https://github.com/Lourdes-Castillo/project-blender)
+## 🚀 Live Demo & Repository
+* 🌐 **Live Website:** [Visit the Online Portfolio](https://Lourdes-Castillo.github.io/project-blender)
+* 📂 **Project Repository:** [https://github.com/Lourdes-Castillo/project-blender](https://github.com/Lourdes-Castillo/project-blender)
 
 ---
 
@@ -14,9 +14,9 @@
 
 | Detail | Description |
 | :--- | :--- |
-| **Subject** | Graficación |
+| **Subject** | Graficación (Computer Graphics) |
 | **Professor** | Rodrigo Fidel Gaxiola Sosa |
-| **Career** | Ing. Sistemas Computacionales |
+| **Career** | Ing. Sistemas Computacionales (Computer Systems Engineering) |
 | **Group** | 5SA |
 
 ### Student:
@@ -24,54 +24,58 @@
 
 ---
 
-## 🎯 Objetivos del Proyecto
-Este proyecto fue desarrollado con un enfoque pedagógico y profesional para fortalecer competencias clave en:
-* **Producción 3D:** Modelado, texturizado y optimización de mallas en Blender.
-* **Integración WebGL:** Carga y renderizado de archivos de transmisión de activos en 3D (formatos `.glb`/`.gltf`) en entornos web.
-* **Desarrollo Frontend:** Creación de interfaces web semánticas, responsivas e interactivas.
-* **Despliegue Profesional:** Publicación y control de versiones en plataformas en la nube.
+## 🎯 Project Objectives
+This project was developed with a pedagogical and professional focus to strengthen key competencies in:
+* **3D Production:** Modeling, texturing, and optimizing meshes within Blender.
+* **WebGL Integration:** Loading and rendering 3D asset transmission files (`.glb`/`.gltf` formats) within web environments.
+* **Frontend Development:** Creating semantic, responsive, and interactive web interfaces.
+* **Professional Deployment:** Version control and cloud publishing via GitHub.
 
 ---
 
-## 🛠️ Características y Requerimientos Cumplidos
+## 🛠️ Features and Requirements Met
 
-### 1. 🌐 Interfaz Web Semántica & Responsiva
-* Construida con **HTML5 semántico** (`<header>`, `<section>`, `<footer>`).
-* Diseño adaptable (Responsive Design) optimizado para móviles y escritorio usando **CSS Moderno (Flexbox / Grid)**.
-* **Secciones Incluidas:** Sobre mí, Habilidades, Contacto y Proyectos (¡incluyendo una sección especial dedicada a mi proyecto de animación con **Rive**!).
+### 1. 🌐 Semantic & Responsive Web Interface
+* Built using **semantic HTML5** (`<header>`, `<section>`, `<footer>`).
+* Adaptable layout (Responsive Design) optimized for both mobile and desktop devices using **Modern CSS (Flexbox / Grid)**.
+* **Included Sections:** About Me, Skills, Contact, and Projects (featuring a special section dedicated to my **Rive** animation project!).
 
-### 2. 🎨 Escena 3D (Modelado en Blender)
-El corazón del portafolio es un mini setup de programador modelado y optimizado para la web, exportado en formato compacto `.glb`.
+### 2. 🎨 3D Scene (Blender Modeling)
+The core of this portfolio is a developer mini-setup, structured with native assets and optimized for the web in `.glb` format.
 
-**Elementos principales modelados desde cero:**
-* Escritorio
-* Monitor de alta resolución
-* Teclado mecánico
-* Mouse ergonómico
-* Laptop / CPU torre
+**Core elements modeled from scratch:**
+* Desk
+* High-resolution monitor
+* Laptop / PC base
 
-**Elementos creativos importados/personalizados (Máx. 7):**
-* 1. *(Modifica esto con tu elemento 1)*
-* 2. *(Modifica esto con tu elemento 2)*
-* 3. *(Modifica esto con tu elemento 3)*
-* 4. *(Modifica esto con tu elemento 4)*
+**Creative elements imported and optimized (7-element asset strategy):**
+* 🖱️ Mouse
+* ⌨️ Keyboard
+* 💺 Gaming Chair
+* 🖥️ PC Case
+* 📱 Phone
+* 🖨️ Printer
+* 💡 Desk Lamp
 
-### 3. ⚡ Integración WebGL e Interactividad (JavaScript)
-* **Renderizado:** Integración del modelo 3D mediante **`<model-viewer>`** totalmente optimizado y responsivo.
-* **Control de Cámara:** Navegación libre que permite al usuario rotar, hacer zoom y mover la cámara de forma fluida.
-* **Interactividad JS:** Implementación de un botón interactivo para cambiar de tema (Claro/Oscuro), carga inteligente del modelo 3D y header dinámico.
+### 3. ⚡ WebGL Integration & Interaction (JavaScript)
+* **Rendering:** 3D model integration utilizing **`<model-viewer>`** for a fully responsive and optimized experience.
+* **Camera Control:** Free-roaming navigation allowing users to orbit, zoom, and pan smoothly around the scene.
+* **JS Interactivity:** 
+  * Implementation of an interactive button to switch between Light/Dark themes.
+  * Custom pure Vanilla JS dynamic particle background system (Constellation network effect).
+  * Smart asset loader for bypassing CORS policies on local environments.
 
 ---
 
-## 📁 Estructura del Repositorio
+## 📁 Repository Structure
 
 ```text
-├── index.html          # Archivo principal de la página web
-├── README.md           # Documentación del proyecto
-├── style.css           # Estilos generales y diseño responsivo
-├── script.js           # Lógica de JavaScript e inicialización WebGL/Interactividad
+├── index.html          # Main web page file
+├── README.md           # Project documentation
+├── style.css           # Core styles and responsive layout
+├── script.js           # JavaScript logic, WebGL initialization, and Particles
 └── assets/
-    ├── Statup.glb      # Modelo 3D optimizado para la web
-    ├── avatar.png      # Avatar y assets visuales
-    └── modelData.js    # Carga offline de base64 (Bypass CORS local)
+    ├── Statup.glb      # Optimized 3D model for web delivery
+    ├── avatar.png      # Avatar and visual assets
+    └── modelData.js    # Base64 fallback file for local offline testing
 ```
