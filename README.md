@@ -5,7 +5,7 @@ Welcome to my interactive web portfolio! This project merges modern web interfac
 ---
 
 ## 🚀 Live Demo & Repository
-* 🌐 **Live Website:** [Visit the Online Portfolio](https://Lourdes-Castillo.github.io/project-blender)
+* 🌐 **Live Website:** [Visit the Online Portfolio](https://idyllic-squirrel-efa267.netlify.app/)
 * 📂 **Project Repository:** [https://github.com/Lourdes-Castillo/project-blender](https://github.com/Lourdes-Castillo/project-blender)
 
 ---
