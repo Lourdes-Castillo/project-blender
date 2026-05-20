@@ -10,6 +10,13 @@ Welcome to my interactive web portfolio! This project merges modern web interfac
 
 ---
 
+## 🎥 Video Preview
+Check out a quick walkthrough of the project:
+
+<video src="https://github.com/Lourdes-Castillo/project-blender/raw/main/assets/video.mp4" controls="controls" muted="muted" style="max-width: 100%; max-height: 500px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);"></video>
+
+---
+
 ## 🎓 Academic Information
 
 | Detail | Description |
