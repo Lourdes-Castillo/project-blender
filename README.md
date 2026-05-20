@@ -13,11 +13,9 @@ Welcome to my interactive web portfolio! This project merges modern web interfac
 ## 🎥 Video Preview
 Check out a quick walkthrough of the project:
 
-<video width="100%" controls muted>
-  <source src="https://github.com/Lourdes-Castillo/project-blender/raw/main/assets/video.mp4" type="video/mp4">
-</video>
+![Video Preview](./assets/video.gif)
 
-*(If the video doesn't load automatically, [click here to view it](https://github.com/Lourdes-Castillo/project-blender/raw/main/assets/video.mp4))*
+*(If the animation doesn't load automatically, [click here to view it](https://github.com/Lourdes-Castillo/project-blender/raw/main/assets/video.gif))*
 
 ---
 
